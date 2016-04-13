@@ -43,15 +43,18 @@ public abstract class ExpandableRecyclerAdapter <T extends ExpandableRecyclerAda
 
     }
 
+    /** */
     @Override
     public long getItemId(int i) {
         return i;
     }
 
+    /** visible item count */
     @Override
     public int getItemCount() {
         return visibleItems == null ? 0 : visibleItems.size();
     }
+
 
     protected View inflate(int resourceID, ViewGroup viewGroup) {
         return LayoutInflater.from(mContext).inflate(resourceID, viewGroup, false);
